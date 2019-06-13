@@ -2,7 +2,7 @@ require 'formula'
 
 class PkgExtract < CurlDownloadStrategy
   def stage
-    safe_system '/usr/bin/xar', '-xf', '/Users/obh/Library/Caches/Homebrew/downloads/@tarball_path'
+    safe_system '/usr/bin/xar', '-xf', '/Users/obh/Library/Caches/Homebrew/downloads/c94247ce6a067cee85cc03cf89c827f31b715fb26c6fe748cf9e1e2a61e667d9--pdftk_server-2.02-mac_osx-10.11-setup.pkg'
     chdir
     safe_system 'mv *.pkg/Payload Payload.gz'
     safe_system 'ls | grep -v Payload | xargs rm -r'
