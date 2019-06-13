@@ -2,7 +2,7 @@ require 'formula'
 
 class PkgExtract < CurlDownloadStrategy
   def stage
-    safe_system '/usr/bin/xar', '-xf', @tarball_path
+    safe_system '/usr/bin/xar', '-xf', $HOME/Library/Caches/Homebrew/downloads/
     chdir
     safe_system 'mv *.pkg/Payload Payload.gz'
     safe_system 'ls | grep -v Payload | xargs rm -r'
